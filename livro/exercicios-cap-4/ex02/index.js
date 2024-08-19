@@ -24,3 +24,7 @@ frm.addEventListener('submit', (e) => {
 
     e.preventDefault();
 });
+
+frm.addEventListener('reset', () => {
+    resp1.innerText = "";
+});
