@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 02 cap 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="float-esquerda">
+            <img src="ex6_3.jpg" alt="" class="normal alta">
+        </div>
+
+        <div class="float-direita">
+            <h1>Programa Revenda Harbie</h1>
+
+            <form>
+                <label for="inModelo">Modelo:</label>
+                <input type="text" id="inModelo" required autofocus> <br><br>
+
+                <label for="inPreco">Preco R$:</label>
+                <input type="number" id="inPreco" required>
+                <input type="submit" value="Adicionar"> <br><br>
+
+                <input type="button" id="btLista" value="Listar Todos">
+                <input type="button" id="btFiltrarPreco" value="Filtrar por Preco">
+                <input type="button" id="btSimularPreco" value="Simular Preco">
+            </form>
+            <pre></pre>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
