@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nome = ["Pedro", "Ana", "Joao"]
+        nome.sort();
+        console.log(nome.join(", "));
+        nome.reverse();
+        console.log(nome.join(", "));
+
+        const numeros = [50, 100, 2]
+        numeros.sort();
+        console.log(numeros.join(", "));
+
+        numeros.sort((a, b) => a - b)
+        console.log(numeros.join(", "))
+    </script>
+</body>
+</html>
