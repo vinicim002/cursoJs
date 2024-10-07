@@ -45,3 +45,19 @@ pre{
 .italico{
     font-style: italic;
 }
+
+.ordem-crescente {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid green;
+    padding: 10px;
+}
+
+.ordem-nao-crescente {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid red;
+    padding: 10px;
+}
