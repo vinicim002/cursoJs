@@ -13,12 +13,6 @@ frm.addEventListener('submit', (e) => {
 
     vetCandidato.push({nomeCandidato, numeroAcertos});
 
-    let lista = "";
-
-    lista += `${vetCandidato}\n`;
-
-    resp.innerText = lista;
-
     frm.reset();
     frm.inCandidatos.focus();
 
