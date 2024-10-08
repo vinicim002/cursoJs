@@ -19,3 +19,12 @@ frm.addEventListener('submit', (e) => {
     frm.btListar.dispatchEvent(new Event('click'));
 });
 
+frm.btListar.addEventListener('click', () => {
+    if(vetCandidato.length == 0){
+        alert("Nao existe candidatos cadastrados");
+        return;
+    }
+
+    
+})
+
