@@ -8,7 +8,7 @@ const aluno = (codigo, nome, notas) => {
 
 // Função para calcular a média ponderada
 const calcularMediaPonderada = (notas) => {
-    // Ordena as notas em ordem decrescente
+    // Ordena as notas em ordem decrescente para ordem crescente ultiliza a - b
     const [maior, segunda, terceira] = notas.sort((a, b) => b - a);
 
     // Calcula a média ponderada com peso 4 para a maior e 3 para as outras duas
