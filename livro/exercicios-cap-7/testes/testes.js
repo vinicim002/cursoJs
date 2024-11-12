@@ -42,16 +42,34 @@
 
 // ======================================================================
 
-const palavra = "saladas";
-const copia1 = palavra.substr(2);
-console.log(copia1);
-const copia2 = palavra.substr(2, 4);
-console.log(copia2);
-const copia3 = palavra.substr(0, palavra.length-1);
-console.log(copia3);
-const copia4 = palavra.substr(-2);
-console.log(copia4);
-const ultima1 = palavra.substr(-1);
-console.log(ultima1);
-const ultima2 = palavra.substr(palavra.length-1);
-console.log(ultima2);
+// const palavra = "saladas";
+// const copia1 = palavra.substr(2);
+// console.log(copia1);
+// const copia2 = palavra.substr(2, 4);
+// console.log(copia2);
+// const copia3 = palavra.substr(0, palavra.length-1);
+// console.log(copia3);
+// const copia4 = palavra.substr(-2);
+// console.log(copia4);
+// const ultima1 = palavra.substr(-1);
+// console.log(ultima1);
+// const ultima2 = palavra.substr(palavra.length-1);
+// console.log(ultima2);
+
+// ======================================================================
+
+// const palavra = "saladas";
+// const copia1 = palavra.indexOf("a");
+// console.log(copia1);
+// const copia2 = palavra.lastIndexOf("a");
+// console.log(copia2);
+// const copia3 = palavra.indexOf("sal");
+// console.log(copia3);
+// const copia4 = palavra.indexOf("e");
+// console.log(copia4);
+// const copia5 = palavra.includes("d");
+// console.log(copia5);
+
+// ======================================================================
+
+
