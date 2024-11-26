@@ -1,0 +1,63 @@
+.container{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.float-esquerda img{
+    width: 100%;
+    max-width: 300px;
+    margin-right: 20px;
+}   
+
+img.normal{
+    float: left;
+    height: 300px;
+    width: 300px;
+}
+
+img.alta{
+    float: left;
+    height: 420px;
+    width: 300px; 
+}
+
+h1{
+    border-bottom-style: inset;
+}
+
+pre{
+    font-size: 1.2em;
+}
+
+.fonte-azul{
+    color: blue;
+}
+
+.oculta{
+    display: none;
+}
+
+.exibe{
+    display: inline;
+}
+
+.italico{
+    font-style: italic;
+}
+
+.ordem-crescente {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid green;
+    padding: 10px;
+}
+
+.ordem-nao-crescente {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid red;
+    padding: 10px;
+}
