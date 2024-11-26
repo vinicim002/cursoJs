@@ -72,12 +72,27 @@
 
 // ======================================================================
 
-const sabores = "calabresa, 4 queijos, atum, frango";
-const partes = sabores.split(",");
+// const sabores = "calabresa, 4 queijos, atum, frango";
+// const partes = sabores.split(",");
 
-console.log(partes[0]);
-console.log(partes[1]);
-console.log(partes[2]);
-console.log(partes[3]);
+// console.log(partes[0]);
+// console.log(partes[1]);
+// console.log(partes[2]);
+// console.log(partes[3]);
+
+// ======================================================================
+
+// const hoje = new Date();
+// const amanha = new Date();
+// const dia = amanha.getDate();
+// amanha.setDate(dia + 1);
+// console.log(`Hoje: ${hoje}\nAmanha: ${amanha}`);
+
+// ======================================================================
+
+const anoAtual = new Date().getFullYear();
+const idade = 10;
+const anoNasc = anoAtual - idade;
+console.log(`Ah... Entao voce naceu em ${anoNasc}`);
 
 
