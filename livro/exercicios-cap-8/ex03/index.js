@@ -32,11 +32,19 @@ const validarNome = (nome) => {
 const obterSobrenome = (nome) => {
     const sobrenome = nome.split(" "); //Vejo quantos parte tenha a minha string
 
-    return sobrenome[sobrenome.length - 1]; //Declaro que qro obter a ultima parte da minha string
+    return sobrenome[sobrenome.length - 1].toLowerCase(); //Declaro que qro obter a ultima parte da minha string
 };
 
 const contarVogais = (nome) => {
+    let qtdVogais = 0;
 
+    for(let i = 0; i < nome.length; i++){
+        if("aeiou".includes(nome.charAt(i).toLowerCase())) {
+            qtdVogais ++;
+        } ; 
+    };
+
+    return String(qtdVogais).padStart(2, "0");
 };
 
 
@@ -44,4 +52,6 @@ frm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const nome = frm.inNome.value;
-})
+
+    resp.innerText = `Senha Inicial: ${obterSobrenome(nome)+contarVogais(nome)}`;
+});
