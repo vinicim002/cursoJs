@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 01 cap 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="float-esquerda">
+            <img src="exerc.jpg" alt="" class="normal alta">
+        </div>
+
+        <div class="float-direita">
+            <h1>Veterinaria Avenida</h1>
+
+            <form> 
+                <label for="inValor">
+                    Valor da vacina: 
+                    <input type="number" id="inValor" required>
+                </label> 
+                <br><br>
+                
+                <label>Possui Convênio:</label>
+                <label for="rdSim"><input type="radio" name="possuiConvenio" id="rdSim"> Sim</label>
+                <label for="rdNao"><input type="radio" name="possuiConvenio" id="rdNao" checked> Não</label>
+                <br><br>
+            
+                <div id="divConvenio" class="oculta">
+                    <label for="convenios">Convênio:</label>
+                    <select name="convenios" id="convenios">
+                        <option value="convenio01">Amigos dos Animais</option>
+                        <option value="convenio02">Saúde Animal</option>
+                    </select>
+                    <br><br>
+                </div>
+                
+            
+                <input type="submit" value="Calcular Desconto">
+            </form>            
+            
+            <pre></pre>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
