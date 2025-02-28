@@ -3,20 +3,23 @@ const resp = document.querySelector("pre");
 
 const calcularDesconto = (valorDaVacina) => {
     const convenioSelecionado = document.getElementById("convenios").value;
-    let descontoPercentual = 0.1; // Padrão para 10%
+    let descontoPercentual = 0.1; // Desconto padrão de 10%
 
+    // Verifica se o convênio é "Amigos dos Animais" ou "Saúde Animal"
     if (convenioSelecionado === "convenio01") {
-        descontoPercentual = 0.2; // 20%
+        descontoPercentual = 0.2; // 20% de desconto
     } else if (convenioSelecionado === "convenio02") {
-        descontoPercentual = 0.5; // 50%
+        descontoPercentual = 0.5; // 50% de desconto
     }
-
+    
+    // Se o usuário escolher "Não", não muda o valor do desconto (ainda será 10%)
     return valorDaVacina * (1 - descontoPercentual); // Retorna o valor com o desconto
-}
+};
 
 frm.addEventListener('change', () => {
-    // Como divConvenio não é um filho direto de frm, preciso pegar o id dele
     const divConvenio = document.getElementById("divConvenio");
+
+    // Se o usuário escolher "Sim" para convênio, exibe o select
     if (frm.rdSim.checked) {
         divConvenio.className = "exibe";
     } else {
@@ -29,9 +32,9 @@ frm.addEventListener('submit', (e) => {
 
     const valorDaVacina = Number(frm.inValor.value);
 
-    // Calcular o valor com desconto
+    // Verifica se o convênio foi selecionado ou se o usuário está com o "não" marcado
     const valorComDesconto = calcularDesconto(valorDaVacina);
 
-    // Mostrar o valor do desconto e o valor a pagar corretamente
+    // Exibe o valor do desconto e o valor a pagar corretamente
     resp.innerHTML = `Desconto: R$ ${(valorDaVacina - valorComDesconto).toFixed(2)}<br>A pagar: R$ ${valorComDesconto.toFixed(2)}`;
 });
