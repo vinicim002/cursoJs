@@ -2,53 +2,76 @@ const frm = document.querySelector("form");
 const respLista = document.querySelector("pre");
 
 frm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const produto = frm.inProduto.value;
+  const produto = frm.inProduto.value;
 
-    // Verifico se existe produto no localStorage
-    if (localStorage.getItem("listaProduto")) { 
-        // Caso haja, pego o que já tinha e adiciono o novo
-        const produtos = localStorage.getItem("listaProduto").split(";"); 
-
-        produtos.push(produto);
-        produtos.sort();
-
-        localStorage.setItem("listaProduto", produtos.join(";"));
-    } else { 
-        // Caso não exista, adiciono o primeiro item sem usar join
-        localStorage.setItem("listaProduto", produto);
-    }
-
-    listaProduto();
-    frm.reset();
+  //Verificando se o produto ja esta cadastrado na lista
+  if(verificarProduto(produto)) {
+    alert("Esse produto ja esta cadastrado!");
     frm.inProduto.focus();
+    return;
+  }
+  
+  //Verificando se exite dados salvos
+  if(localStorage.getItem("listaDeProdutos")){
+
+    const listaDeProdutos = localStorage.getItem("listaDeProdutos").split(";");
+
+    //Adiciono o item no array e coloco em ordem alfabetica
+    listaDeProdutos.push(produto);
+    listaDeProdutos.sort();
+
+    //Salvando o novo porduto na listaDeProdutos e convertendo em string
+    localStorage.setItem("listaDeProdutos", listaDeProdutos.join(";"));
+  } else {
+    //Senao eh o primeiro item 
+    localStorage.setItem("listaDeProdutos", produto);
+  }
+
+  listarProdutos();
+
+  //Limap o input e colocar o focu nele novamente 
+  frm.reset();
+  frm.inProduto.focus();
+
 });
 
-// Função para listar os produtos
-const listaProduto = () => {
-    if (!localStorage.getItem("listaProduto")) {
-        respLista.innerText = "";
-        return;
-    }
+//Funcao para verificar se um item ja consta na lista
+const verificarProduto = (produto) => {
 
-    const produtos = localStorage.getItem("listaProduto").split(";");
-    
-    // Corrigindo a referência errada de resp para respLista
-    respLista.innerText = `Produtos Adicionados\n-----------------------\n${produtos.join("\n")}`;
-};
+  if(localStorage.getItem("listaDeProdutos")){
 
-window.addEventListener("load", listaProduto);
+    const listaDeProdutos = localStorage.getItem("listaDeProdutos").split(";");
 
-// Corrigindo a referência do botão limpar
-document.querySelector("#btnLimpar").addEventListener("click", () => {
-  if (localStorage.getItem("listaProduto")) {
+    return listaDeProdutos.includes(produto.toString());
+  } else {
+    return false;
+  }
+}
+
+const listarProdutos = () => {
+  if(!localStorage.getItem("listaDeProdutos")) {
+    respLista.innerText = "";
+    return;
+  } else {
+    const listaDeProdutos = localStorage.getItem("listaDeProdutos").split(";");
+
+    respLista.innerText = `Produtos Adicionados\n-----------------------\n
+${listaDeProdutos.join("\n")}`;
+  }
+}
+
+window.addEventListener("load", listarProdutos);
+
+frm.btnLimpar.addEventListener("click", () => {
+  if (localStorage.getItem("listaDeProdutos")) {
     if (confirm("Deseja realmente excluir todos os itens da lista?")) {
-      localStorage.removeItem("listaProduto");
-      listaProduto();
+      localStorage.removeItem("listaDeProdutos")
+      listarProdutos()
     }
   } else {
-    alert("Lista está vazia...");
+    alert("Lista está vazia...")
   }
-  frm.inProduto.focus();
-});
+  frm.inProduto.focus()
+})

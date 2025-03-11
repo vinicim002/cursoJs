@@ -40,8 +40,12 @@ const listarProdutos = () => {
 
   resp.innerText = `Produtos Adicionados\n-----------------------\n${produtos.join("\n")}`
 }
+
+//Ao atualizar a pagina trazer os dados salvos
 window.addEventListener("load", listarProdutos)
 
+
+//Apagar a lista
 frm.btLimpar.addEventListener("click", () => {
   if (localStorage.getItem("comprasProduto")) {
     if (confirm("Deseja realmente excluir todos os itens da lista?")) {
