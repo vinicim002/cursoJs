@@ -39,4 +39,58 @@ frm.btSelecionar.addEventListener('click', () => {
     }
 
     tarefas[aux + 1].className = "tarefa-selecionada";
-})
+});
+
+frm.btRetirar.addEventListener("click", () => {
+    const tarefas  = document.querySelectorAll("h5");
+
+    let aux = -1;
+
+    tarefas.forEach((tarefa, i) => {
+        if(tarefa.className === "tarefa-selecionada") {
+            aux = i;
+        }
+    })
+
+    if (aux === -1) {
+        alert("Selecione uma tarefa para remove-la");
+        return;
+    }
+
+    if(confirm(`Confirma Exclusao de "${tarefas[aux].innerText}"?`)){
+        divQuadro.removeChild(tarefas[aux]);
+    }
+});
+
+frm.btGravar.addEventListener("click", () => {
+    const tarefas = document.querySelectorAll("h5");
+
+    if (tarefas.length === 0) {
+        alert("Nao ha tarefas para serem salvas");
+        return;
+    }
+
+    let dados = "";
+    tarefas.forEach(tarefa => {
+        dados += tarefa.innerText + ";";
+    });
+
+    localStorage.setItem("tarefasDia", dados.slice(0, -1));
+
+    if (localStorage.getItem("tarefasDia")) {
+        alert("Ok! Tarefas Salvas");
+    }
+});
+
+window.addEventListener("load", () => {
+    if (localStorage.getItem("tarefasDia")) {
+        const dados = localStorage.getItem("tarefasDia").split(";");
+
+        dados.forEach(dado => {
+            const h5 = document.createElement("h5");
+            const texto = document.createTextNode(dado);
+            h5.appendChild(texto);
+            divQuadro.appendChild(h5);
+        })
+    }
+});
