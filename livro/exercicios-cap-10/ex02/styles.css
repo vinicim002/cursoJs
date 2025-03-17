@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+label, .btn {
+    font-size: 1.8rem;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+#container-img {
+    width: 25%;
+}
+
+#container-img img{
+    width: 100%;
+}
+
+#form-containner {
+    width: 75%;
+}
+
+#form-containner form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 75%;
+}
+
+.form-control {
+    font-size: 1.6rem;
+}
