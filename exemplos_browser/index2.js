@@ -56,10 +56,75 @@
 // console.log(idades.includes(3)); //Retorna true se tiver o elemento
 // console.log(idades.includes(10)); //Retorna false se nao tiver o elemento
 
-const carros = [];
-carros.push({modelo: "Sandero", preco: 46500});
-carros.push({modelo: "Palio", preco: 37800});
+// const carros = [];
+// carros.push({modelo: "Sandero", preco: 46500});
+// carros.push({modelo: "Palio", preco: 37800});
 
-for(const carro of carros) {
-    console.log(`${carro.modelo} - R$: ${carro.preco}`);
-}
+// for(const carro of carros) {
+//     console.log(`${carro.modelo} - R$: ${carro.preco}`);
+// }
+
+//Desetruturacao 
+
+// const carros = [];
+// carros.push({modelo: "Sandero", preco: 46500});
+// carros.push({modelo: "Palio", preco: 37800});
+
+// for (const carro of carros) {
+//     const {modelo, preco} = carro;
+//     console.log(`${modelo} - R$ ${preco}`);
+// }
+
+
+// const pacientes = ["Ana", "Joao", "Sofia", "Carlos"];
+// const [a, b, c] = pacientes;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+//Operador Rest (...) -> cria um novo vetor;
+//Obs na destruturacao dos elementos de um array o operador Rest dever ser o ultimo
+
+// const pacientes = ["Ana", "Joao", "Sofia", "Carlos"];
+// const [atender, proximo, ...outros] = pacientes;
+// console.log(atender);
+// console.log(proximo);
+// console.log(outros);
+
+//Operador Spread (...) = "espalhar"
+
+// const carro = {modelo: "Corsa", preco: 59500};
+// const carro2 = {...carro, ano: 2020}; //"Ele meio que herda oque tinha no primeiro objeto  e adicionar mais coisa caso o usuario queira "
+
+// let pacientes = ["Joao", "Sofia"];
+// console.log(pacientes);
+// pacientes = ["Ana", ...pacientes]; //Adiciona no Inicio
+// console.log(pacientes);
+// pacientes = [...pacientes, "Maria"]; //Adiciona no Final
+// console.log(pacientes);
+
+
+//Filter, Map, Reduce
+
+//Map
+// const numeros = [10, 13, 20, 8, 15];
+// const dobros = numeros.map(num => num * 2); //essa variavel num eh meio q responsavel por pegar cada elemento 
+
+// console.log(dobros.join(", "));
+
+
+//Filter
+
+// const numeros = [10, 13, 20, 8, 15];
+// const pares = numeros.filter(num => num % 2 == 0);
+// console.log(pares.join(", "));
+
+//Reduce
+
+// const numeros = [10, 13, 20, 8, 15];
+// const soma = numeros.reduce((acumulador, num) => acumulador + num, 0); //Esse "0" eh valor inicial do acumulador
+// console.log(`Soma: ${soma}`);
+
+//Classificar os intem de um vetor
+// nome.sort() -> ordem crescente
+// nome.revese() -> ordem decrescente
