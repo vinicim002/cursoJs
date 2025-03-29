@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #252A41;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 14.4rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.295);
+    border-radius: 2rem;
+}
+
+.container-esquerdo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39.2rem;
+    height: 50rem;
+    padding: 3rem;
+    background: linear-gradient(#140152, #04052E);
+    border-radius: 2rem 0 0 2rem;
+}
+
+.container-direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background-color: #E4E4E4;
+    width: 70rem;
+    height: 50rem;
+    padding: 3rem;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.entradaDados {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.entradaDados label {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.entradaDados input {
+    height: 5.3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 5px solid #140152;
+    background-color: #E4E4E4;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ajusta espaçamento entre botões */
+    gap: 1rem; /* Reduz espaço para melhor layout */
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem; /* Ajusta melhor os ícones */
+    background-color: #140152;
+    color: white;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #2b0a91;
+    color: white;
+    transform: scale(1.05); /* Pequeno efeito de crescimento no hover */
+}
+
+.btn img {
+    width: 2rem;
+    height: 2rem;
+}
+
+

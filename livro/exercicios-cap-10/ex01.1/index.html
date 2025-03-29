@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas do dia(a realizar)</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="container-esquerdo">
+            <img src="imgs/Illustration.svg" alt="Illustration">
+        </div>
+
+        <div class="container-direita">
+            <form action="">
+                <div class="entradaDados">
+                    <label for="inTarefa">Tarefas:</label>
+                    <input type="text" id="inTarefa" required>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="btn" id="adicionar">
+                         Adicionar
+                         <img src="./imgs/material-symbols_add.svg">
+                    </button>
+                    
+
+                    <button id="selecionar" class="btn" type="button">
+                         Selecionar
+                         <img src="./imgs/vaadin_exchange.svg" alt="Ícone Selecionar">
+                    </button>
+                    
+                    <button id="retirar" class="btn" type="button">
+                        Retirar selecionada
+                        <img src="./imgs/tabler_trash.svg" alt="Ícone Retirar">
+                    </button>
+                    
+                    <button id="gravar" class="btn" type="button">
+                         Gravar
+                         <img src="./imgs/fluent_record-16-regular.svg" alt="Ícone Gravar">
+                    </button>
+                    
+                </div>
+            </form>
+        </div>
+
+        <div class="tarefasAdicionadas">
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
