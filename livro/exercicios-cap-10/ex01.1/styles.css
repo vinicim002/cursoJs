@@ -103,4 +103,28 @@ body {
     height: 2rem;
 }
 
+.tarefasAdicionadas {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tarefasAdicionadas h2 {
+    background-color: #140152;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.tarefa-selecionado{
+    background-color: #2b0a91;
+}
+
+.tarefa-normal {
+    background-color: #140152;
+}
+
 
