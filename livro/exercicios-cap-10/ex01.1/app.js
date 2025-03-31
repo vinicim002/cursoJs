@@ -38,6 +38,12 @@ btnSelecionar.addEventListener("click", () => {
             break; // Interrompe o loop corretamente
         }
     }
+
+    if (aux == tarefas.length -1) {
+        aux = -1;
+    }
+
+    tarefas[aux + 1].className = "tarefa-selecionado";
 });
 
 
