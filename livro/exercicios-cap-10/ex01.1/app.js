@@ -1,5 +1,7 @@
 const frm = document.querySelector("form");
 const btnSelecionar = document.querySelector("#selecionar");
+const btnRetirar = document.querySelector("#retirar");
+const btnGravar = document.querySelector("#gravar");
 
 const respLista = document.querySelector(".tarefasAdicionadas");
 
@@ -46,5 +48,63 @@ btnSelecionar.addEventListener("click", () => {
 
     tarefas[aux + 1].className = "tarefa-selecionado";
 });
+
+
+btnRetirar.addEventListener("click", () => {
+    const tarefas = document.querySelectorAll("h2");
+
+    if (tarefas.length === 0) {
+        alert("Não existem tarefas para se retirar!");
+        return;
+    }
+
+    tarefas.forEach((elem) => {
+        if (elem.classList.contains("tarefa-selecionado")) {
+            if (confirm(`Confirma exclusão de "${elem.innerText}"?`)) {
+                elem.remove();
+            }
+        }
+    });
+});
+
+
+btnGravar.addEventListener("click", () => {
+    const tarefas = document.querySelectorAll("h2");
+
+    if(tarefas.length === 0) {
+        alert("Nao ha tarefas para serem salvas");
+        return;
+    }
+
+    let dados = "";
+
+    tarefas.forEach(tarefa => {
+        dados += tarefa.innerText + ";";
+    })
+
+    localStorage.setItem("tarefasDoDia", dados.slice(0, -1));
+
+    if(localStorage.getItem("tarefasDoDia")){
+        alert("Tarefas Salva!");
+    }
+});
+
+window.addEventListener("load", () => {
+    let dados = [];
+
+    if (localStorage.getItem("tarefasDoDia")) {
+        dados = localStorage.getItem("tarefasDoDia").split(";");
+    }
+
+    dados.forEach(dado => {
+        const h2 = document.createElement("h2");
+        const texto = document.createTextNode(dado);
+
+        respLista.appendChild(h2);
+        h2.appendChild(texto);
+        h2.classList.add("tarefa-normal");
+    });
+});
+
 
 
