@@ -9,11 +9,12 @@ frm.addEventListener("submit", (e) => {
 
     const inTarefa = frm.inTarefa.value;
 
-    const h5 = document.createElement("h2");
+    const h2 = document.createElement("h2");
     const texto = document.createTextNode(inTarefa);
 
-    respLista.appendChild(h5);
-    h5.appendChild(texto);
+    respLista.appendChild(h2);
+    h2.appendChild(texto);
+    h2.classList = "tarefa-normal";
 
 
     frm.reset();
