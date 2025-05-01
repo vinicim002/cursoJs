@@ -1,0 +1,23 @@
+// ⚙️ 2. Intermediário – Encadeando Promises
+// Objetivo: Criar duas Promises que dependem uma da outra. A primeira busca um nome e a segunda usa o nome para buscar uma saudação.
+
+// Exercício:
+function pegarNome() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Maria"), 1000);
+  });
+}
+
+function saudarPessoa(nome) {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(`Olá, ${nome}! 😊`), 1000);
+  });
+}
+
+// Tarefa: Pegue o nome e depois use para exibir a saudação
+pegarNome()
+    .then(nome => saudarPessoa(nome))
+    .then(result => console.log(result));
+
+
+
