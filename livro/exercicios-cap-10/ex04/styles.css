@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 8rem 14rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    width: 100%;
+}
+
+.container-direita {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 80%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid black;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-add, .btn-montar-tabela, .btn-novos-clubes{
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+} 
+
+.clubes {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+table { 
+    width: 100%;
+}
+
+caption {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    caption-side: top;
+}
+
+
+tbody {
+    width: 100%;
+}
+
+tr:nth-child(odd) {
+    background-color: #c4c4c4b4;
+    width: 100%;
+  }
+
+td {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+tr:nth-last-child(1) {
+    border-bottom: 1px solid rgba(119, 119, 119, 0.568);
+}

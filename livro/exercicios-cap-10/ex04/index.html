@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercicio c</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container-esquerda">
+        <img src="exerc.jpg" alt="imagem do exercicio" />
+      </div>
+
+      <div class="container-direita">
+        <h1>Copa do Brasil - Classificados</h1>
+
+        <form action="#">
+          <label for="inClube">Clube:</label>
+          <input type="text" id="inClube" required />
+
+          <div class="botoes">
+            <button type="button" class="btn-add">Adicionar</button>
+            <button type="button" class="btn-montar-tabela">Montar tabela de Jogos</button>
+            <button type="button" class="btn-novos-clubes">Novos Clubes</button>
+          </div>
+        </form>
+
+        <div class="clubes">
+          <h5>Fluminense</h5>
+          <h5>Flamengo</h5>
+          <h5>Botafogo</h5>
+          <h5>Vasco</h5>
+        </div>
+
+        <div class="tabela">
+          <table>
+            <caption>
+              Tabela de Jogos
+            </caption>
+            <!-- Título da tabela -->
+            <tbody>
+              <tr>
+                <td>Fluminense</td>
+                <td>Flamengo</td>
+              </tr>
+              <tr>
+                <td>Botafogo</td>
+                <td>Vasco</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
