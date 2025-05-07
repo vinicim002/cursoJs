@@ -1,35 +1,43 @@
 const main = document.querySelector('.main');
 const btnSubmit = document.querySelector('.btn-add');
+const btnMostrarTabela = document.querySelector('.btn-montar-tabela');
 
 btnSubmit.addEventListener('click', (e) => {
     e.preventDefault();
 
     const input = document.querySelector('#inClube');
+    const nomeClube = input.value.trim();
 
-    const nomeClube = input.value;
+    if (nomeClube === '') return;
 
-    if (nomeClube.trim() === '') return;
+    mostrarClubes(nomeClube);
 
     input.value = '';
     input.focus();
-})
+});
 
-//Adicionar os clubes na pagina
-
+// Adicionar os clubes na página
 const mostrarClubes = (clube) => {
-    let divClubes = document.createElement('div');
+    // Verifica se já existe a div.clubes
+    let divClubes = document.querySelector('.clubes');
 
-    //Se n existir ele ira criar
+    // Se não existir, cria
     if (!divClubes) {
-        let divClubes = document.createElement('div');
+        divClubes = document.createElement('div');
         divClubes.classList.add('clubes');
 
-        //Adicionanado essa div dentro da div container-direita
         const containerDireita = document.querySelector('.container-direita');
-        containerDireita.appendChild('divClubes');
+        containerDireita.appendChild(divClubes);
     }
 
-    const h5 = document.createElement('h5')
-}
+    // Cria o novo <h5> com o nome do clube
+    const h5 = document.createElement('h5');
+    h5.textContent = clube;
 
+    // Adiciona o <h5> dentro da div.clubes
+    divClubes.appendChild(h5);
+};
 
+btnMostrarTabela.addEventListener('click', () => {
+    const h5 = document.querySelector()
+})
