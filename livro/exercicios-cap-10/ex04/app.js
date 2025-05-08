@@ -39,5 +39,6 @@ const mostrarClubes = (clube) => {
 };
 
 btnMostrarTabela.addEventListener('click', () => {
-    const h5 = document.querySelector()
+    const h5 = document.querySelector();
+    
 })
