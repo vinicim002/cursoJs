@@ -1,1 +1,1 @@
-delete pessoa.nome;
+console.log(pessoa[chave]);

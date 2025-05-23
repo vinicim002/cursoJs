@@ -1,7 +1,7 @@
 const pessoa = {
     nome : "Vinicius",
     sobrenome : "Silva",
-    idade : 22,
+    idade : 23,
 };
 
 const key = 'nome';
@@ -36,3 +36,40 @@ pessoa.falarSobrenome = function() {
 }
 
 pessoa.falarSobrenome();
+
+pessoa.getDataNascimento = function () { 
+    const dataAtual = new Date();
+    return dataAtual.getFullYear() - this.idade;
+}
+
+console.log(pessoa.getDataNascimento());
+
+for (let chave in pessoa) {
+    console.log(chave);
+    console.log(pessoa[chave]);
+}
+
+// Factory functions / Constructor functions / Classes
+
+function criarPessoa(nome, sobrenome) {
+    return {
+        nome,
+        sobrenome,
+        get nomeCompleto() {
+            return `${this.nome} ${this.sobrenome}`;
+        }
+    }
+}
+
+const p1 = criarPessoa('Vinicius', 'Vila Nova');
+console.log(p1.nomeCompleto);
+
+function Pessoa (nome, sobreNome) {
+    this.nome = nome;
+    this.sobreNome = sobreNome;
+}
+
+const p2 = new Pessoa('Alice', 'Magalhoes');
+Object.freeze(p2);
+p2.nome = 'Outra coisa';
+console.log(p2);
