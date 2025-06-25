@@ -18,4 +18,11 @@ class Pessoa {
     }
 }
 
-exports.Pessoa = Pessoa;
+// exports.Pessoa = Pessoa;
+
+// const nome = 'Vinicius';
+// const sobrenome = 'Vila Nova';
+
+// module.exports = {
+//     nome, sobrenome, Pessoa
+// }
