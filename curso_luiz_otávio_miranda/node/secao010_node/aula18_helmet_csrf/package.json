@@ -1,0 +1,39 @@
+{
+  "name": "aula15_mongoDB_modal",
+  "version": "1.0.0",
+  "main": "routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js --ignore public --ignore frontend",
+    "dev": "webpack -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "core-js": "^3.42.0",
+    "css-loader": "^7.1.2",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.6.0",
+    "ejs": "^3.1.10",
+    "express": "^4.17.1",
+    "express-session": "^1.18.1",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.16.1",
+    "regenerator-runtime": "^0.14.1",
+    "style-loader": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/traverse": "^7.27.7",
+    "babel-loader": "^10.0.0",
+    "nodemon": "^3.1.10",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  }
+}
