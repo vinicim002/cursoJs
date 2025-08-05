@@ -101,7 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 // import * as MeuModulo from './modulo1'
 // import {nome, sobreNome, idade, soma, Pessoa} from './modulo1';
 
-console.log(_modulo1__WEBPACK_IMPORTED_MODULE_0__["default"]);
+console.log(_modulo1__WEBPACK_IMPORTED_MODULE_0__.nome);
+console.log((0,_modulo1__WEBPACK_IMPORTED_MODULE_0__.soma)(5, 5));
 
 // console.log(nome, sobreNome, seila, idade);
 // console.log(soma(5,5));
