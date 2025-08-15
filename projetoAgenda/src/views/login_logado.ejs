@@ -1,0 +1,17 @@
+<%- include("includes/head") %> <%- include("includes/nav") %>
+
+<div class="container" style="width: 100vw;">
+  <div class="row justify-content-center">
+    <div
+      class="col-lg-8 mt-3 d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1 class="text-center">Ola <%= user.email %></h1>
+      <p class="text-center lead">Voce precisa sair para criar outra conta!</p>
+
+      <%- include('includes/messages') %>
+
+    </div>
+  </div>
+</div>
+
+<%- include("includes/footer") %>
