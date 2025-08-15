@@ -1,0 +1,95 @@
+<%- include("includes/head") %> <%- include("includes/nav") %>
+
+<div class="container" style="width: 100vw;">
+  <div class="row justify-content-center">
+    <div
+      class="col-lg-8 mt-3 d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1 class="text-center">Login</h1>
+      <p class="text-center lead">Faça seu login ou crie sua conta abaixo</p>
+
+      <div
+        class="row mt-5 d-flex flex-row justify-content-center align-items-center gx-5"
+      >
+        <div class="col-lg-6 mb-4 text-left">
+          <h4 class="text-nowrap">Faça seu cadastro</h4>
+
+          <form class="d-flex flex-column justify-content-center mt-5">
+            <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
+              <label for="exampleInputEmail1" class="form-label text-left"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >Check me out</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-lg-6 mb-4 text-left">
+          <h4>Entrar no sistema</h4>
+
+          <form class="d-flex flex-column justify-content-center mt-5">
+            <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
+              <label for="exampleInputEmail1" class="form-label text-left"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >Check me out</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("includes/footer") %>
