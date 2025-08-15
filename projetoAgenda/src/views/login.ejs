@@ -5,7 +5,7 @@
     <div
       class="col-lg-8 mt-3 d-flex flex-column justify-content-center align-items-center"
     >
-      <h1 class="text-center">Login</h1>
+      <h1 class="text-center">Criar conta ou Entrar</h1>
       <p class="text-center lead">Faça seu login ou crie sua conta abaixo</p>
 
       <div
@@ -13,78 +13,64 @@
       >
         <div class="col-lg-6 mb-4 text-left">
           <h4 class="text-nowrap">Faça seu cadastro</h4>
+          <p>Se voce nao tem conta, preencha o formulario abaixo:</p>
 
-          <form class="d-flex flex-column justify-content-center mt-5">
+          <form action="/login/register" method="POST" class="d-flex flex-column justify-content-center mt-5">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
               <label for="exampleInputEmail1" class="form-label text-left"
-                >Email address</label
+                >Seu e-mail</label
               >
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                name="email"
                 aria-describedby="emailHelp"
               />
             </div>
             <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
+              <label for="exampleInputEmail1" class="form-label text-left"
+                >Sua senha</label
               >
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                name="password"
+                aria-describedby="emailHelp"
               />
             </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
-              >
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Criar minha conta</button>
           </form>
         </div>
         <div class="col-lg-6 mb-4 text-left">
-          <h4>Entrar no sistema</h4>
+          <h4>Facao seu login</h4>
+          <p>Se voce ja tem uma conta, fazca login abaixo:</p>
 
-          <form class="d-flex flex-column justify-content-center mt-5">
+          <form action="/login/login" method="POST" class="d-flex flex-column justify-content-center mt-5">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
               <label for="exampleInputEmail1" class="form-label text-left"
-                >Email address</label
+                >Seu e-mail</label
               >
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                name="email"
                 aria-describedby="emailHelp"
               />
             </div>
             <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
+              <label for="exampleInputEmail1" class="form-label text-left"
+                >Sua senha</label
               >
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                name="password"
+                aria-describedby="emailHelp"
               />
             </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
-              >
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Entrar</button>
           </form>
         </div>
       </div>
