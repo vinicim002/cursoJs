@@ -11,35 +11,36 @@
 
       <%- include('includes/messages') %>
 
-      <form
-        action="/contato/register"
-        method="POST"
-        class="d-flex flex-column justify-content-center mt-5"
-      >
-        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <% if (contato._id) { %>
+  <form action="/contato/edit/<%= contato._id %>" method="POST" class="d-flex flex-column justify-content-center mt-5">
+<% } else { %>
+  <form action="/contato/register" method="POST" class="d-flex flex-column justify-content-center mt-5">
+<% } %>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
 
-        <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
-          <label class="form-label text-left">Nome</label>
-          <input type="text" class="form-control" name="nome">
-        </div>
+    <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
+      <label class="form-label text-left">Nome</label>
+      <input type="text" class="form-control" name="nome" value="<%= contato.nome %>">
+    </div>
 
-        <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
-          <label class="form-label text-left">Sobrenome</label>
-          <input type="text" class="form-control" name="sobrenome">
-        </div>
+    <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
+      <label class="form-label text-left">Sobrenome</label>
+      <input type="text" class="form-control" name="sobrenome" value="<%= contato.sobrenome %>">
+    </div>
 
-        <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
-          <label class="form-label text-left">E-mail</label>
-          <input type="email" class="form-control" name="email">
-        </div>
+    <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
+      <label class="form-label text-left">E-mail</label>
+      <input type="email" class="form-control" name="email" value="<%= contato.email %>">
+    </div>
 
-        <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
-          <label class="form-label text-left">Telefone</label>
-          <input type="tel" class="form-control" name="telefone">
-        </div>
+    <div class="mb-3 d-flex flex-column justify-content-start align-items-start">
+      <label class="form-label text-left">Telefone</label>
+      <input type="tel" class="form-control" name="telefone" value="<%= contato.telefone %>">
+    </div>
 
-        <button type="submit" class="btn btn-primary">Salvar</button>
-      </form>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </form>
+
     </div>
 
     <div class="col-lg-2"></div>
